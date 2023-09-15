@@ -1,3 +1,4 @@
+a =int(input())
 #rekurencyjnie ciąg fibonnaciego
 def fib(n):
   if n==0:

@@ -1,5 +1,6 @@
 #wbudowane funkcje 
 #importuje bibliotekę math
+#from math import factorial #inny sposób importu samej biblioteki
 import math
 
 a = 6

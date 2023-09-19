@@ -22,4 +22,14 @@ def potegaPN_1(a,n):
 
 
 #print(potegaPN(2,7))
-print(potegaPN_1(2,7))
+#print(potegaPN_1(2,7))
+
+
+def silniaProsta(n):
+  silnia =1
+  for i in range(1,n+1):
+    silnia *=i
+  return silnia
+
+
+print(silniaProsta(4))

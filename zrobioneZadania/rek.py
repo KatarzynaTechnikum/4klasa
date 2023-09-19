@@ -51,13 +51,21 @@ def potegaPN_1(a,n):
       w= potegaPN(a,int(n/2))
       return a*w*w
 
+def prostaRekurencja(a):
+  if a==0: 
+    return 3
+  else:
+    return prostaRekurencja(a-1)+2
+
+print("prosta rekurencja", prostaRekurencja(6))
+      
 
 
 #print(potegaPN(2,7))
-print(potegaPN_1(2,7))
+#print(potegaPN_1(2,7))
 
-print(suma_cyfr(669))
-print(potega(2,8))
+#print(suma_cyfr(669))
+#print(potega(2,8))
 
-print(fib(a))
-print(silnia(a))
+#print(fib(a))
+#print(silnia(a))

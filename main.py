@@ -1,35 +1,36 @@
-def potegaPN(a,n):
-  if n==0:
-    return 1
+import turtle
+
+t = turtle.Turtle()
+
+
+def zbiorCantor(dl, wytnij, n):
+  if n == 0:
+    t.pd()
+    t.forward(dl)
+    t.pu()
   else:
-    if n%2==0:
-      w= potegaPN(a,n/2)
-      return w*w
-    else:
-      return a*(potegaPN(a,n-1))
-      
-def potegaPN_1(a,n):
-  if n==0:
-    return 1
-  else:
-    if n%2==0:
-      w= potegaPN(a,n/2)
-      return w*w
-    else:
-      w= potegaPN(a,int(n/2))
-      return a*w*w
+    nowa_dl = dl * (1 - wytnij) / 2
+    zbiorCantor(nowa_dl, wytnij, n - 1)
+    t.forward(dl * wytnij)
+    zbiorCantor(nowa_dl, wytnij, n - 1)
 
 
+myWin = turtle.Screen()
+t.speed(1000)
+szerokosc = 800
+wysokosc = 300
 
-#print(potegaPN(2,7))
-#print(potegaPN_1(2,7))
+n = 6
+t.pu()
+t.back(szerokosc / 2)
+t.lt(90)
+t.forward(wysokosc / 2)
 
+for i in range(n):
+  t.rt(90)
+  zbiorCantor(szerokosc, 1 / 3, i)
+  t.back(szerokosc)
+  t.lt(90)
+  t.back(wysokosc / (n - 1))
 
-def silniaProsta(n):
-  silnia =1
-  for i in range(1,n+1):
-    silnia *=i
-  return silnia
-
-
-print(silniaProsta(4))
+myWin.exitonclick()

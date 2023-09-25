@@ -1,9 +1,9 @@
 import math
 liczba_dwojkowa="11101"
-#print(int(liczba_dwojkowa,2))
+print(int(liczba_dwojkowa,2))
 
 liczba_szesnastkowa="A0"
-#print(int(liczba_szesnastkowa,16))
+print(int(liczba_szesnastkowa,16))
 
 def naDwojkowa(a):
   t=[]
